@@ -2,10 +2,10 @@ package com.example.mlabel
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
+import android.widget.ScrollView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.label.ImageLabeling
 import com.google.mlkit.vision.label.defaults.ImageLabelerOptions
@@ -21,8 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
+        mainScrollView.post(Runnable { mainScrollView.fullScroll(ScrollView.FOCUS_DOWN) })
 
         val uploadBtn = findViewById<Button>(R.id.btnUpload)
 
